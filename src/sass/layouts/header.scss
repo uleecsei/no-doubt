@@ -20,6 +20,7 @@
         display: flex;
         justify-content: space-around;
         height: 40px;
+        padding: 10px 0;
     }
 }
 
@@ -44,11 +45,22 @@
 }
 
 .navigation {
+    font-family: $title-font;
+    font-size: $nav-font-size;
     &__link {
         display: inline-block;
         color: $white;
     }
+    &__link:hover {
+        color: $yellow;
+        text-decoration: underline;
+    }
     &__list {
         display: flex;
+        height: 100%;
+        align-items: center;
+        width: 560px;
+        justify-content: space-around;
     }
 }
+
