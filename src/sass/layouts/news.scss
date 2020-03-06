@@ -2,7 +2,7 @@
     background-color: $whitesmoke;
 
     &__container {
-        max-width: 1200px;
+        max-width: $max-width-container;
         margin: 50px auto 0;
         padding: 10px;
     }
@@ -21,8 +21,11 @@
     }
 
     &__item {
-        width: 40%;
         margin: 2%;
+
+        @media (min-width: 768px) {
+            width: 40%;
+        }
     }
 }
 
