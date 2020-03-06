@@ -1,0 +1,39 @@
+HTML
+
+1. Use BEM
+2. HTML pages should be created in "html" folder. Path: src/html.
+3. Individual components should be created in "templates" folder
+
+Styles (scss)
+
+1. Use placeholders, variables only. Path: src/sass/
+2. All styles files for component create and save in "sass/layouts" folder 
+and import them to "main.scss" like in example
+
+JavaScript
+
+1. JS files should be created in "js" folder and imported to "app.js" Path: src/app.js
+
+
+GIT
+
+Every time/day when you start develop:
+
+1. git pull origin develop   - get last updates on your local machine
+2. git checkout -b yourSuperBranchName - if you start develop some new feature
+3. git add . - save all changes
+4. git commit -m 'Your comment about your added code'
+5. git push origin yourSuperBranchName - send all changes to repository
+
+Then you should go to repository web-site https://github.com/Vanchurick/no-doubt ]
+and make PULL REQUEST from yourSuperBranchName to develop. 
+If no conflicts Confirm Merge.
+After merge, please, delete yourSuperBranchName from repository.
+
+Then you should return to your IDE.
+In console:
+
+1. git checkout develop - change branch to develop
+2. git pull origin develop - get last updates on your local machine
+3. git branch -d yourSuperBranchName - remove your old branch
+4. git checkout -b newYourSuperBranchName - create your new next branch
