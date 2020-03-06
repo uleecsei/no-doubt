@@ -1,7 +1,66 @@
-.title {
-    font-family: "Nosifer", cursive;
-    
-    text-align: center;
-    // font-family: $logo-font, Arial, Helvetica, sans-serif;
-    font-size: 72px;
+.header {
+    background-color: $black;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    border-bottom: 8px solid $pink;
+    &__title {
+        margin: 14px auto 0 auto;
+        width: 340px;
+        height: 80px;
+        font-family: $logo-font, cursive;
+        text-align: center;
+        font-size: $logo-desktop-size;
+    }
+    &__link {
+        display: inline-block;
+        color: $yellow;
+    }
+    &__navigation {
+        display: flex;
+        justify-content: space-around;
+        height: 40px;
+        padding: 10px 0;
+    }
 }
+
+.menu {
+    &__link {
+        display: inline-block;
+        color: $pink;
+        display: inline-block;
+        width: 39px;
+        height: 39px;
+        line-height: 39px;
+        background: #272727;
+        border-radius: 50px;
+    }
+    &__list {
+        display: flex;
+        font-size: 20px;
+        text-align: center;
+        width: 300px;
+        justify-content: space-around;
+    }
+}
+
+.navigation {
+    font-family: $title-font;
+    font-size: $nav-font-size;
+    &__link {
+        display: inline-block;
+        color: $white;
+    }
+    &__link:hover {
+        color: $yellow;
+        text-decoration: underline;
+    }
+    &__list {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        width: 560px;
+        justify-content: space-around;
+    }
+}
+
