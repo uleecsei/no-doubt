@@ -17,16 +17,15 @@ class Karaoke {
     addLyricsInDom(){
 
         this.song.map((item, i) => {
-            let element = document.createElement('li');
-            let elementInner = document.createElement('span');
-            elementInner.innerHTML = item.text;
-            element.appendChild(elementInner);
+            let element = document.createElement('p');
+            element.innerHTML = item.text;
+            element.classList.add("karaoke__textLine");
             this.divSong.appendChild(element);
         })
     }
 
     scrollText() {
-        let marginIndex = -10;
+        let marginIndex = -100;
         let previousIndex;
         this.audio.ontimeupdate = (e) => {
             this.song.forEach((element, index)=>{
