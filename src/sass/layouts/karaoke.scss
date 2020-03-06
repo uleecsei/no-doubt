@@ -1,0 +1,37 @@
+.karaoke {
+  display: flex;
+  flex-direction: row;
+}
+
+.karaoke__songBlock {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.karaoke__textBlock {
+  width: 90%;
+  height: 100px;
+  overflow: hidden;
+  font-size: 70px;
+  text-align: center;
+}
+
+.karaoke__textLine {
+  height: 100px;
+}
+
+button[class^="karaoke__button"]{
+  width: 100px;
+  height: 100px;
+  border: none;
+  outline: none;
+}
+
+.karaoke__button--play {
+  background: url("/src/images/play.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
