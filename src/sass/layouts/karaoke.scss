@@ -1,4 +1,7 @@
 .karaoke {
+  height: 300px;
+  overflow: hidden;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
 }
@@ -12,14 +15,20 @@
 
 .karaoke__textBlock {
   width: 90%;
-  height: 100px;
-  overflow: hidden;
-  font-size: 70px;
+  font-size: $karaoke-text-size;
   text-align: center;
+  margin-top: 100px;
 }
 
 .karaoke__textLine {
   height: 100px;
+  width: 100%;
+  max-width: 100%;
+  color: $light-black;
+}
+
+.karaoke__textLine--current {
+  color: $pink;
 }
 
 button[class^="karaoke__button"]{
@@ -31,6 +40,13 @@ button[class^="karaoke__button"]{
 
 .karaoke__button--play {
   background: url("/src/images/play.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.karaoke__button--pause{
+  background: url("/src/images/pause.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
