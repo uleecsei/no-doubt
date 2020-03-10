@@ -25,7 +25,8 @@
 
     &__title {
         font-family: $title-font;
-        font-size: $section-title-size;
+        font-size: $card-title-size;
+        text-transform: uppercase;
         margin: 20px 0 0;
         text-align: center;
         color: $yellow;
