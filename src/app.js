@@ -5,3 +5,4 @@ import './sass/main.scss';
 import './js/tools';
 import './js/slider';
 import './js/karaokeScript';
+import './js/scroll';
