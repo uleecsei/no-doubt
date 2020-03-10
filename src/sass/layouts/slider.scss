@@ -1,8 +1,9 @@
 .slider{
 	max-width: 100%;
 	position: relative;
-	margin: auto;
-	height: 80vh;
+	margin-top: 162px;
+	min-height: fit-content;
+	height: 78vh;
 }
 
 .slider__list {
@@ -25,19 +26,24 @@
 	box-shadow: none;
 }
 
+.slider__console {
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	margin-top: -28px;
+}
+
 .slider__btn {
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
 	width: auto;
-	margin-top: -22px;
 	padding: 16px;
-	color: white;
+	color: $pink;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 24px;
 	text-decoration: none;
 	transition: 0.6s ease;
-
 	&--prev{
 		left: 0;
 		border-radius: 0 3px 3px 0;
@@ -46,15 +52,21 @@
 		right: 0;
 		border-radius: 3px 0 0 3px;
 	}
-}
-
-.slider__btn {
-	background-color: rgba(0, 0, 0, 0.8);
+	&:hover{
+		color: $white;
+		font-size: 28px;
+	}
 }
 
 .slider-dots {
-	display: flex;
-	justify-content: center;
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.slider-dots__item {
+	display: inline-block;
 }
 
 .slider-dots__btn {
@@ -72,7 +84,7 @@
 }
 
 .slider-dots__btn:hover {
-	background-color: #aaa;
+	background-color: $pink;
 }
 
 .slider__image {
