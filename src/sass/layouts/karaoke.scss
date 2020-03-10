@@ -1,8 +1,10 @@
 .karaoke {
+  max-width: 1200px;
   height: 300px;
   overflow: hidden;
-  margin-top: 50px;
+  margin: 50px auto 0;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
 }
 
@@ -11,17 +13,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $white;
 }
 
 .karaoke__textBlock {
   width: 90%;
   font-size: $karaoke-text-size;
+  font-family: $text-font;
   text-align: center;
   margin-top: 100px;
+  padding: 0 5px;
 }
 
 .karaoke__textLine {
   height: 100px;
+  line-height: normal;
   width: 100%;
   max-width: 100%;
   color: $light-black;
@@ -33,6 +39,7 @@
 
 button[class^="karaoke__button"]{
   width: 100px;
+  max-width: 100%;
   height: 100px;
   border: none;
   outline: none;
@@ -50,4 +57,45 @@ button[class^="karaoke__button"]{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+@media (min-width: 1024px){
+  .karaoke__textBlock {
+    font-size: $karaoke-text-size-max;
+  }
+}
+
+@media (max-width: 768px){
+  .karaoke__songBlock {
+    width: 20%;
+  }
+
+  .karaoke__textBlock {
+    width: 80%;
+  }
+}
+
+@media (max-width: 425px){
+  .karaoke {
+    margin-top: 10px;
+    height: 370px;
+    flex-wrap: wrap;
+  }
+
+  .karaoke__songBlock {
+    width: 100%;
+    z-index: 20;
+  }
+
+
+  .karaoke__textBlock {
+    width: 100%;
+    font-size: $karaoke-text-size-min;
+  }
+
+  button[class^="karaoke__button"]{
+    width: 70px;
+    height: 70px;
+  }
 }

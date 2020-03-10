@@ -3,21 +3,19 @@ import {doNotSpeak} from "./songs";
 window.onload = function() {
     let currentSong = new Karaoke(doNotSpeak);
     let playerButton = document.querySelector("#playerButton");
+    let audio = document.getElementById('audio');
     currentSong.addLyricsInDom();
     currentSong.audio.onplaying = function(){currentSong.scrollText()};
     playerButton.addEventListener("click", function(){currentSong.changePlayState()});
+    audio.addEventListener("ended", function(){currentSong.playAgain()});
 };
-
-function playSong () {
-
-}
 
 
 class Karaoke {
     constructor(song){
         this.song  = song;
         this.divSong = document.querySelector('#divSong');
-        this.audio = document.querySelector('#audio');
+        this.audio = document.getElementsByClassName('karaoke__audio')[0];
         this.isPlaying = false;
     }
 
@@ -58,11 +56,19 @@ class Karaoke {
                 this.audio.pause();
                 this.isPlaying = false;
                 playerButton.classList.toggle("karaoke__button--pause");
-            }else{
+        }else{
                 this.audio.play();
                 this.isPlaying = true;
                 playerButton.classList.toggle("karaoke__button--pause");
         }
     }
+
+    playAgain () {
+        let playerButton = document.querySelector("#playerButton");
+        this.divSong.style.marginTop = "100px";
+        this.isPlaying = false;
+        playerButton.classList.toggle("karaoke__button--pause");
+    }
+
 
 }

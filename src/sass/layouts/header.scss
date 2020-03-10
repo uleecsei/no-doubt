@@ -1,6 +1,7 @@
 .header {
     background-color: $black;
-    position: fixed;
+		position: fixed;
+		top: 0;
     width: 100%;
     z-index: 9999;
     border-bottom: 8px solid $pink;
