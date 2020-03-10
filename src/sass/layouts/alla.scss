@@ -2,58 +2,69 @@
     max-width: 1200px;
     margin: 162px auto 0;
     padding: 30px 20px;
-    background-color: black;
+    background-color:$black;
 }
 
-.artistBlock__title {
+.title {
     font-family: "Righteous";
     color: $yellow;
-    
+    font-size: $section-title-size;
+    margin: 20px 0;
     text-align: center;
 }
 
-.artistBlock__about {
+.about {
     display: flex;
     height: 550px;
 }
 
 
-.photoBlock {
+.photo-block {
     width: 50%;
     overflow: hidden;
 }
 
-.textBlock {
+.photo-block__wrapper {
+    width: 200%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.photo-block__immage {
+    width: 50%;
+    height: 100%;
+    transition: margin-left 1s ease;
+}
+
+.description {
     width: 50%;
     display: flex;
     flex-direction: column;
     color: $white;
 }
 
-.photoBlock__wrapper {
-    width: 200%;
-    display: flex;
-    flex-wrap: nowrap;
-}
 
-.photoBlock__immage {
-    width: 49%;
+.description__item {
     height: 100%;
-    transition: margin-left 1s ease;
-}
-
-.aboutBlock1 {
-    width: 50%;
     overflow: hidden;
     padding: 10px;
 }
 
-.aboutBlock2 {
-    width: 50%;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.aboutBlock__topArticle {
+.description__top {
+    height: 100%;
+    padding: 20px;
     transition: margin-top 1s ease;
+}
+
+.description__bottom {
+    height: 100%;
+    padding: 20px;
+}
+
+.description__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: $section-title-size;
+    margin: 10px auto;
 }

@@ -1,7 +1,7 @@
 // import Slider from "../slider.js";
 // import Karaoke from "../karaokeScript.js";
 
-import { initSlider, initKaraoke } from "../helpers.js";
+import { initSlider, initKaraoke, scrollBlocks } from "../helpers.js";
 import { doNotSpeak } from "../songs";
 
 export default class Router {
@@ -39,6 +39,10 @@ export default class Router {
 
             initKaraoke(doNotSpeak);
 
+        }
+
+        if (htmlName === "allapage.html") {
+            scrollBlocks();
         }
     }
 }

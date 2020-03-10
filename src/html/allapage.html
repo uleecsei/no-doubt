@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../sass/layouts/alla.scss">
 </head>
 
 <body>
     <div class="artistBlock">
-        <h1 class="artistBlock__title">Alla</h1>
-        <div class="artistBlock__about">
-            <div class="photoBlock">
-                <div class="photoBlock__wrapper">
-                    <!-- <img src="../images/alla/main.jfif" alt="" class="photoBlock__immage">
-                    <img src="../images/alla/Alla1.png" alt="" class="photoBlock__immage"> -->
+        <h1 class="title">Nesterova Alla</h1>
+        <div class="about">
+            <div class="photo-block">
+                <div class="photo-block__wrapper">
+                    <img src="./src/images/alla/main.jfif" alt="" class="photo-block__immage">
+                    <img src="./src/images/alla/Alla1.png" alt="" class="photo-block__immage">
                 </div>
             </div>
-            <div class="textBlock">
-                <div class="aboutBlock1">
-                    <div class="aboutBlock__topArticle">
-                        <h2 class="aboutBlock__title">Lorem 1</h2>
-                        <p class="aboutBlock__text">
+            <div class="description">
+                <div class="description__item">
+                    <div class="description__top">
+                        <h2 class="description__title">Lorem 1</h2>
+                        <p class="description__article">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -33,9 +32,9 @@
                             culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                     </div>
-                    <div class="aboutBlock__bottomArticle">
-                        <h2 class="aboutBlock__title">Lorem 3</h2>
-                        <p class="aboutBlock__text">
+                    <div class="description__bottom">
+                        <h2 class="description__title">Lorem 3</h2>
+                        <p class="description__article">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -46,10 +45,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="aboutBlock2">
-                    <div class="aboutBlock__topArticle">
-                        <h2 class="aboutBlock__title">Lorem 2</h2>
-                        <p class="aboutBlock__text">
+                <div class="description__item">
+                    <div class="description__top">
+                        <h2 class="description__title">Lorem 2</h2>
+                        <p class="description__article">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -59,9 +58,9 @@
                             culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                     </div>
-                    <div class="aboutBlock__bottomArticle">
-                        <h2 class="aboutBlock__title">Lorem 4</h2>
-                        <p class="aboutBlock__text">
+                    <div class="description__bottom">
+                        <h2 class="description__title">Lorem 4</h2>
+                        <p class="description__article">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -74,51 +73,36 @@
                 </div>
             </div>
         </div>
-        <div class="artistBlock__contacts">
-            <img src="" alt="">
-            <img src="" alt="">
+        <div class="contacts">
+            <ul class="contacts__list">
+                <li class="contacts__item">
+                    <a
+                        href="https://www.facebook.com/ivan.dashko"
+                        class="social__link fab fa-facebook"
+                    ></a>
+                </li>
+                <li class="contacts__item">
+                    <a
+                        href="https://www.instagram.com/vanchurick/"
+                        class="social__link fab fa-instagram"
+                    ></a>
+                </li>
+                <li class="contacts__item">
+                    <a
+                        href="https://github.com/Vanchurick/"
+                        class="social__link fab fa-github"
+                    ></a>
+                </li>
+                <li class="contacts__item">
+                    <a
+                        href="https://www.linkedin.com/in/ivan-dashko-111236187/"
+                        class="social__link fab fa-linkedin"
+                    ></a>
+                </li>
+            </ul>
         </div>
     </div>
 
-    <script>
-
-        if (document.addEventListener) {
-            if ('onwheel' in document) {
-                // IE9+, FF17+, Ch31+
-                document.addEventListener("wheel", onWheel);
-            } else if ('onmousewheel' in document) {
-                // устаревший вариант события
-                document.addEventListener("mousewheel", onWheel);
-            } else {
-                // Firefox < 17
-                document.addEventListener("MozMousePixelScroll", onWheel);
-            }
-        } else { // IE8-
-            document.attachEvent("onmousewheel", onWheel);
-        }
-
-        function onWheel(e) {
-            e = e || window.event;
-            var delta = e.deltaY || e.detail || e.wheelDelta;
-            var prevPosition = 0;
-            var duration = "";
-            if (prevPosition < delta) {
-                duration = "down";
-            } else {
-                duration = "up";
-            }
-
-            if (duration === "down") {
-                document.getElementsByClassName("photoBlock__immage")[0].style.marginLeft = "-50%"
-                document.querySelectorAll(".aboutBlock__topArticle").forEach(e => { e.style.marginTop = "-50%" })
-            } else if (duration === "up") {
-                document.getElementsByClassName("photoBlock__immage")[0].style.marginLeft = "0"
-                document.querySelectorAll(".aboutBlock__topArticle").forEach(e => { e.style.marginTop = "0" })
-            }
-        }
-
-
-    </script>
 </body>
 
 </html>
