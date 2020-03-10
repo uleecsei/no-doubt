@@ -1,5 +1,7 @@
-import Slider from "../slider.js";
-import Karaoke from "../karaokeScript.js";
+// import Slider from "../slider.js";
+// import Karaoke from "../karaokeScript.js";
+
+import { initSlider, initKaraoke } from "../helpers.js";
 import { doNotSpeak } from "../songs";
 
 export default class Router {
@@ -17,6 +19,7 @@ export default class Router {
     }
 
     hasChanged(scope) {
+        
         scope.goToRoute(
             scope.routes.filter(
                 route => "#" + route.name == window.location.hash
@@ -32,21 +35,10 @@ export default class Router {
             .then(text => (this.rootElem.innerHTML = text));
 
         if (htmlName === "main.html") {
-            let slider = new Slider(document.querySelectorAll(".slider")[0]);
+            let slider = initSlider(document.querySelector(".slider"));
 
-            let currentSong = new Karaoke(doNotSpeak);
-            let playerButton = document.querySelector("#playerButton");
-            let audio = document.getElementById("audio");
-            currentSong.addLyricsInDom();
-            currentSong.audio.onplaying = function() {
-                currentSong.scrollText();
-            };
-            playerButton.addEventListener("click", function() {
-                currentSong.changePlayState();
-            });
-            audio.addEventListener("ended", function() {
-                currentSong.playAgain();
-            });
+            initKaraoke(doNotSpeak);
+
         }
     }
 }
