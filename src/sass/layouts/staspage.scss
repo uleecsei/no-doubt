@@ -24,7 +24,9 @@
 
 .s-article {
   &__container {
-    display: flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
     &--reverse {
       flex-direction: row-reverse;
@@ -33,7 +35,12 @@
 
   &__image-container {
     border: 3px solid $pink;
-    flex: 1 0 40%;
+		flex: 0 0 40%;
+		align-self: flex-start;
+
+		@media (max-width: 600px) {
+			flex: 1 0 100%;
+		}
   }
 
   &__image {
@@ -41,19 +48,36 @@
   }
 
   &__text-container {
-    padding: 0 20px;
+		flex: 0 0 58%;
+
+		@media (max-width: 600px) {
+			flex: 1 0 100%;
+			padding: 20px 0;
+		}
   }
 
-  &__article-title {
+  &__title {
     font-size: $card-title-size;
     font-family: $title-font;
     color: $pink;
+    padding-bottom: 20px;
+
   }
 
   &__text {
     color: $white;
     font-size: $text-size;
     font-family: $text-font;
-    line-height: 1.6em;
+    line-height: $text-line-height;
+  }
+}
+
+.s-contact {
+
+  &__social-link {
+    margin-right: 20px;
+    cursor: pointer;
+    color: $pink;
+    font-size: $card-title-size;
   }
 }
