@@ -1,9 +1,9 @@
 .header {
     background-color: $black;
-		position: fixed;
-		top: 0;
+    position: fixed;
+    top: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 10;
     border-bottom: 8px solid $pink;
     &__title {
         margin: 14px auto 0 auto;
@@ -68,5 +68,62 @@
         align-items: center;
         width: 560px;
         justify-content: space-around;
+    }
+}
+
+.burger {
+    color: $white;
+    font-size: 25px;
+    display: none;
+    height: 60px;
+    &__button {
+        margin: 15px 0 0 10px;
+        cursor: pointer;
+    }
+}
+
+.side-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    z-index: 20;
+    background-color: $light-black;
+    flex-direction: column;
+    transition: width 0.3s ease-in-out;
+}
+
+.side-menu.shown {
+    display: flex;
+}
+
+@media (max-width: 900px) {
+    .burger {
+        display: block;
+    }
+    .header__navigation {
+        display: none;
+    }
+    .menu {
+        margin-top: 80px;
+        &__link {
+            width: 30px;
+            font-size: 20px;
+        }
+        &__list {
+            width: auto;
+            flex-wrap: wrap;
+        }
+    }
+    .navigation {
+        &__link {
+            margin-top: 10px;
+        }
+        &__list {
+            flex-direction: column;
+            width: auto;
+        }
     }
 }
