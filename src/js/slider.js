@@ -1,8 +1,10 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function(){
-    let slider = new Slider(document.querySelectorAll(".slider")[0]);
-});
+// document.addEventListener("DOMContentLoaded", function(){
+//     let slider = new Slider(document.querySelectorAll(".slider")[0]);
+// });
+
+// console.log(document);
 
 class Slider{
     constructor(container){
@@ -101,3 +103,5 @@ class Slider{
         clearTimeout(this._timerId);
     }
 }
+
+export default Slider;

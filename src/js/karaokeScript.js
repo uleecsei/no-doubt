@@ -1,14 +1,14 @@
-import {doNotSpeak} from "./songs";
+// import {doNotSpeak} from "./songs";
 
-window.onload = function() {
-    let currentSong = new Karaoke(doNotSpeak);
-    let playerButton = document.querySelector("#playerButton");
-    let audio = document.getElementById('audio');
-    currentSong.addLyricsInDom();
-    currentSong.audio.onplaying = function(){currentSong.scrollText()};
-    playerButton.addEventListener("click", function(){currentSong.changePlayState()});
-    audio.addEventListener("ended", function(){currentSong.playAgain()});
-};
+// window.onload = function() {
+//     let currentSong = new Karaoke(doNotSpeak);
+//     let playerButton = document.querySelector("#playerButton");
+//     let audio = document.getElementById('audio');
+//     currentSong.addLyricsInDom();
+//     currentSong.audio.onplaying = function(){currentSong.scrollText()};
+//     playerButton.addEventListener("click", function(){currentSong.changePlayState()});
+//     audio.addEventListener("ended", function(){currentSong.playAgain()});
+// };
 
 
 class Karaoke {
@@ -72,3 +72,5 @@ class Karaoke {
 
 
 }
+
+export default Karaoke;
