@@ -9,14 +9,45 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./src/sass/main.scss" />
-        <script src="https://kit.fontawesome.com/001563cf24.js" crossorigin="anonymous"></script>
+        <script
+            src="https://kit.fontawesome.com/001563cf24.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
+        <div class="side-menu">
+            <div class="burger">
+                <div class="burger__button fas fa-bars"></div>
+            </div>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="https://www.facebook.com/nodoubt" class="menu__link fab fa-facebook"></a></li>
+                    <li class="menu__item"><a href="https://www.instagram.com/nodoubt" class="menu__link fab fa-instagram"></a></li>
+                    <li class="menu__item"><a href="https://twitter.com/nodoubt" class="menu__link fab fa-twitter"></a></li>
+                    <li class="menu__item"><a href="https://www.youtube.com/user/NoDoubtTV" class="menu__link fas fa-play-circle"></a></li>
+                    <li class="menu__item"><a href="https://www.youtube.com/user/NoDoubtVEVO" class="menu__link fab fa-youtube"></a></li>
+                    <li class="menu__item"><a href="https://github.com/Vanchurick/no-doubt" class="menu__link fab fa-github"></a></li>
+                </ul>
+            </nav>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About us</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Alla</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Ivan</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Stanislav</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Oleksii</a></li>
+                </ul>
+            </nav>
+        </div>
         <header class="header">
             <div class="header__branding">
                 <h1 class="header__title">
                     <a href="#" class="header__link">No doubt</a>
                 </h1>
+            </div>
+            <div class="burger">
+                <div class="burger__button fas fa-bars"></div>
             </div>
             <div class="header__navigation">
                 <nav class="menu">
@@ -31,165 +62,18 @@
                 </nav>
                 <nav class="navigation">
                     <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                        <li class="navigation__item"><a href="#main" class="navigation__link">Home</a></li>
                         <li class="navigation__item"><a href="#" class="navigation__link">About us</a></li>
                         <li class="navigation__item"><a href="#" class="navigation__link">Alla</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Ivan</a></li>
+                        <li class="navigation__item"><a href="#ivanpage" class="navigation__link">Ivan</a></li>
                         <li class="navigation__item"><a href="#" class="navigation__link">Stanislav</a></li>
                         <li class="navigation__item"><a href="#" class="navigation__link">Oleksii</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <main class="root">
-            <div class="slider">
-                    <div class="slider__console">
-                        <a
-                            href="#"
-                            class="slider__btn slider__btn--prev js-slider-prev"
-                            >&#10094;</a
-                        >
-                        <a
-                            href="#"
-                            class="slider__btn slider__btn--next js-slider-next"
-                            >&#10095;</a
-                        >
-                    </div>
-                    <ul class="slider__list">
-                        <li class="slider__item">
-                            <img
-                                src="./src/images/banner1.png"
-                                alt="slider image"
-                                class="slider__image"
-                            />
-                        </li>
-                        <li class="slider__item">
-                            <img
-                                src="./src/images/banner2.png"
-                                alt="slider image"
-                                class="slider__image"
-                            />
-                        </li>
-                        <li class="slider__item">
-                            <img
-                                src="./src/images/banner3.png"
-                                alt="slider image"
-                                class="slider__image"
-                            />
-                        </li>
-                    </ul>
-                    <ul class="slider-dots">
-                        <li class="slider-dots__item">
-                            <span class="slider-dots__btn"></span>
-                        </li>
-                        <li class="slider-dots__item">
-                            <span class="slider-dots__btn"></span>
-                        </li>
-                        <li class="slider-dots__item">
-                            <span class="slider-dots__btn"></span>
-                        </li>
-                    </ul>
-            </div>
-            <section class="news">
-                <div class="news__container">
-                    <h2 class="news__title">news</h2>
-                    <ul class="news__list">
-                        <li class="news__item card">
-                            <h3 class="card__title">
-                                Celebrate The 25th Anniversary Of Our Debut
-                                Album
-                            </h3>
-                            <div class="card__image-container">
-                                <img
-                                    src="./src/images/news/25thAnniversary.jpg"
-                                    alt="Global Citizen Earth Day"
-                                    class="card__image"
-                                />
-                            </div>
-                            <div class="card__text-container">
-                                <p class="card__text">
-                                    To celebrate the 25th Anniversary of our
-                                    self-titled debut album, we’re releasing it
-                                    on vinyl for the first time ever! 100 copies
-                                    of the limited edition color vinyl have been
-                                    personally signed by Gwen Stefani, Tony
-                                    Kanal, Tom Dumont, Adrian Young and Eric
-                                    Stefani.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="news__item card">
-                            <h3 class="card__title">Thank You No Doubters!</h3>
-                            <div class="card__image-container">
-                                <img
-                                    src="./src/images/news/band_thankyou.jpg"
-                                    alt="Global Citizen Earth Day"
-                                    class="card__image"
-                                />
-                            </div>
-                            <div class="card__text-container">
-                                <p class="card__text">
-                                    Thank you to everyone who came out to see us
-                                    over the last few months. We had such a fun
-                                    summer and an amazing 2015!
-                                </p>
-                            </div>
-                        </li>
-                        <li class="news__item card">
-                            <h3 class="card__title">Riot Fest & Carnival</h3>
-                            <div class="card__image-container">
-                                <img
-                                    src="./src/images/news/riot_fest.jpg"
-                                    alt="Global Citizen Earth Day"
-                                    class="card__image"
-                                />
-                            </div>
-                            <div class="card__text-container">
-                                <p class="card__text">
-                                    We'll be making our first-ever appearance at
-                                    Riot Fest & Carnival at Douglas Park in
-                                    Chicago the weekend of September 11-13! Get
-                                    your 3-Day GA & VIP passes beginning today
-                                    at
-                                    <a href="www.riotfest.org"
-                                        >www.riotfest.org</a
-                                    >
-                                    .
-                                </p>
-                            </div>
-                        </li>
-                        <li class="news__item card">
-                            <h3 class="card__title">
-                                Global Citizen Earth Day
-                            </h3>
-                            <div class="card__image-container">
-                                <img
-                                    src="./src/images/news/earth-day.jpg"
-                                    alt="Global Citizen Earth Day"
-                                    class="card__image"
-                                />
-                            </div>
-                            <div class="card__text-container">
-                                <p class="card__text">
-                                    Saturday marked the first stop on the 2015
-                                    roadmap to end extreme poverty by 2030 and
-                                    tackle climate change! Thank you to the
-                                    250,000 Global Citizens who joined us in
-                                    Washington DC for Global...
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <div class="karaoke">
-                <div class="karaoke__songBlock">
-                    <audio id="audio" class="karaoke__audio" src="./src/No%20Doubt%20-%20Don't%20Speak.mp3"></audio>
-                    <button id="playerButton" class="karaoke__button--play"></button>
-                </div>
-                <div class="karaoke__textBlock" id="divSong"></div>
-            </div>
+        <main id="root">
+            
         </main>
 
         <footer></footer>

@@ -1,0 +1,132 @@
+.ivan {
+    background-color: $whitesmoke;
+    margin-top: 162px;
+
+    &__container {
+        max-width: $max-width-container;
+        margin: 0 auto;
+        background-color: $black;
+        padding: 20px;
+    }
+}
+
+.introduction {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+
+    &__information {
+        width: 50%;
+    }
+
+    &__image-container {
+        width: 30%;
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-size: $section-title-size;
+        margin: 20px 0 0;
+        text-align: center;
+        color: $yellow;
+    }
+
+    &__text {
+        font-family: $text-font;
+        font-size: $text-size;
+        margin-top: 20%;
+        background-color: $white;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    &__name {
+        font-family: $title-font;
+    }
+
+    &__image-container {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
+
+.career {
+    display: flex;
+    justify-content: space-evenly;
+
+    &__image-container {
+        width: 30%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__information {
+        width: 50%;
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-size: $section-title-size;
+        margin: 20px 0 0;
+        color: $yellow;
+    }
+
+    &__subtitle {
+        font-family: $title-font;
+        font-size: $card-title-size;
+        margin: 20px 0 0;
+        color: $pink;
+    }
+
+    &__paragraph {
+        font-family: $text-font;
+        font-size: $text-size;
+        margin-top: 20px;
+        background-color: $white;
+        border-radius: 20px;
+        padding: 10px;
+    }
+}
+
+.social {
+    background-color: $yellow;
+    padding: 20px;
+    border-radius: 20px;
+
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        background-color: $black;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 0px 10px 4px $pink;
+        }
+    }
+
+    &__link {
+        font-size: 30px;
+        color: $pink;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+}

@@ -5,3 +5,6 @@ import './sass/main.scss';
 import './js/tools';
 import './js/slider';
 import './js/karaokeScript';
+import './js/scroll';
+import './js/burger';
+import './js/routing/routing';
