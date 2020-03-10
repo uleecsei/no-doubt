@@ -1,6 +1,7 @@
 .artistBlock {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 162px auto 0;
+    padding: 30px 20px;
     background-color: black;
 }
 
@@ -26,7 +27,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: $white;
 }
 
 .photoBlock__wrapper {
