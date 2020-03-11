@@ -44,10 +44,12 @@ export const scrollBlocks = () => {
 
         if (duration === "down") {
             document.querySelector(".photo-block__immage").style.marginLeft = "-50%"
-            document.querySelectorAll(".description__top").forEach(e => { e.style.marginTop = "-50%" })
+            document.querySelectorAll(".description__top").forEach(e => { e.style.display = "none" })
+            document.querySelectorAll(".description__bottom").forEach(e => { e.style.display = "block" })
         } else if (duration === "up") {
             document.querySelector(".photo-block__immage").style.marginLeft = "0"
-            document.querySelectorAll(".description__top").forEach(e => { e.style.marginTop = "0" })
+            document.querySelectorAll(".description__top").forEach(e => { e.style.display = "block" })
+            document.querySelectorAll(".description__bottom").forEach(e => { e.style.display = "none" })
         }
     }
 
