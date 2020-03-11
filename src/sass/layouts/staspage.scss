@@ -1,0 +1,112 @@
+.s-person {
+  background-color: $whitesmoke;
+
+  &__container {
+    max-width: $max-width-container;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: $black;
+    margin-top: $margin-top;
+  }
+
+  &__title {
+    font-family: $title-font;
+    font-size: $section-title-size;
+    color: $yellow;
+    padding: 20px;
+    text-align: center;
+  }
+
+  &__article {
+    padding: 20px 0;
+  }
+}
+
+.s-article {
+  &__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__image-container {
+    border: 3px solid $pink;
+		flex: 0 0 40%;
+		align-self: flex-start;
+
+		@media (max-width: 600px) {
+			flex: 1 0 100%;
+		}
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__text-container {
+		flex: 0 0 58%;
+
+		@media (max-width: 600px) {
+			flex: 1 0 100%;
+			padding: 20px 0;
+		}
+  }
+
+  &__title {
+    font-size: $card-title-size;
+    font-family: $title-font;
+    color: $pink;
+    padding-bottom: 20px;
+
+  }
+
+  &__text {
+    color: $white;
+    font-size: $text-size;
+    font-family: $text-font;
+    line-height: $text-line-height;
+  }
+}
+
+.s-contact {
+  text-align: center;
+
+  &__social-link {
+    margin-right: 20px;
+    cursor: pointer;
+    color: $pink;
+    font-size: $card-title-size;
+    animation-duration: 1s;
+    transition: color 0.6s cubic-bezier(1,.02,1,-0.14);
+    animation-name: backRotate;
+
+  }
+
+  &__social-link:hover {
+    animation-name: forwardRotate;
+    color: $yellow;
+  }
+}
+
+
+@keyframes forwardRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes backRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
