@@ -5,7 +5,7 @@
     min-width: $min-width-container;
     margin: $margin-top auto 0;
     background-color:$black;
-    height: calc(100vh-162px);
+    height: calc(100vh-$margin-top);
 
     &__title {
         font-family: "Righteous";
