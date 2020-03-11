@@ -3,6 +3,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    min-width: $min-width;
     z-index: 10;
     border-bottom: 8px solid $pink;
     &__title {
