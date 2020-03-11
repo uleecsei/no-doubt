@@ -27,11 +27,13 @@ export const initKaraoke = song => {
 
 export const scrollBlocks = () => {
 
-    let block = document.querySelector(".artistBlock");
+    let block = document.querySelector(".scrollArea");
     
     block.addEventListener("wheel", onWheel)
 
     function onWheel(e) {
+        e.preventDefault();
+        
         if (window.innerWidth >= 1200) {
             e = e || window.event;
             var delta = e.deltaY || e.detail || e.wheelDelta;
