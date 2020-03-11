@@ -11,6 +11,7 @@
     top: 300px;
     left: 20px;
     font-size: $scroll-block-text-size;
+    display: none;
 }
 
 
@@ -101,6 +102,9 @@
 // Scroll functionality
 
 @media only screen and (min-width: 1200px){
+    .scrollArea {
+        display: block;
+    }
 
     .about-s {
         display: none;
