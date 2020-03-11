@@ -2,7 +2,7 @@
     max-width: 1200px;
     margin: $margin-top auto 0;
     background-color:$black;
-    height: 100vh-$margin-top;
+    height: calc(100vh-$margin-top);
 }
 .artistBlock {
     padding: 30px 20px;
