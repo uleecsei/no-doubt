@@ -7,4 +7,5 @@ let router = new Router([
     new Route("allapage", "allapage.html"),
     new Route("staspage", "staspage.html"),
     new Route("aboutus", "aboutus.html"),
+    new Route("oleksiipage", "oleksiipage.html")
 ]);
