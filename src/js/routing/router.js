@@ -39,7 +39,7 @@ export default class Router {
         }
 
         if (htmlName === "allapage.html") {
-            scrollBlocks();
+            scrollBlocks(); 
         }
     }
 }

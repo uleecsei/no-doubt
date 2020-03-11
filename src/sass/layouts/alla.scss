@@ -1,3 +1,6 @@
+.alla {
+    background-color: $whitesmoke;
+}
 
 .artistBlock {
     padding: 10px 20px;
@@ -17,52 +20,21 @@
 }
 
 .about {
+    display: none;
+}
+
+.about-s {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
-}
-
-.photo-block {
-    width: 50%;
-    max-width: 500px;
-    max-height: 500px;
-    overflow: hidden;
-    border-radius: 20px;
-
-    &__wrapper {
-        width: 200%;
-        height: 100%;
-        display: flex;
-        flex-wrap: nowrap;
-    }
 
     &__immage {
-        width: 50%;
-        height: 100%;
-        transition: margin-left 1s ease;
-    }
-
-
-}
-
-
-.description {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    color: $white;
-    box-sizing: border-box;
-
-    &__item {
-        height: 100%;
-        overflow: hidden;
-        margin: 10px;
-        border: 1px solid $white;
+        width: 40%;
         border-radius: 20px;
-        box-shadow: 0px 0px 5px 5px $yellow;
+        margin: 10px;
     }
-
+    
     &__title {
         color: $pink;
         text-align: center;
@@ -71,37 +43,145 @@
         margin: 10px auto;
     }
 
-    &__top {
-        height: 100%;
+    &__text {
+        width: 50%;
+        color: $white;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px 5px $yellow;
         padding: 20px;
-        transition: margin-top 1s ease;
-        box-sizing: border-box;
-        transition: display 1s ease;
-        min-height: 270px;
-    }
-
-    &__bottom {
-        height: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        display: none;
-        transition: display 1s ease;
-        min-height: 270px;
-    
-    }
-
-    &__article {
         font-family: $text-font;
         font-size: $text-size;
         line-height: $text-line-height;
+
+        &--center {
+            @extend .about-s__text;
+            width: 100%;
+            margin: 20px 
+        }
     }
 }
+
+
+@media (max-width: 425px){
+
+    .about-s {
+        justify-content: center;
+
+        &__immage {
+            width: 80%;
+            margin: 20px auto;
+        }
+    
+        &__text {
+            width: 80%;
+            margin: 20px; 
+        }
+    }
+}
+
+
+
+
+// Scroll functionality
+
+@media only screen and (min-width: 1200px){
+
+    .about-s {
+        display: none;
+    }
+
+    .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .photo-block {
+        width: 50%;
+        max-width: 500px;
+        max-height: 500px;
+        overflow: hidden;
+        border-radius: 20px;
+    
+        &__wrapper {
+            width: 200%;
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    
+        &__immage {
+            width: 50%;
+            height: 100%;
+            transition: margin-left 1s ease;
+        }
+    
+    
+    }
+
+    .description {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        box-sizing: border-box;
+    
+        &__item {
+            height: 100%;
+            overflow: hidden;
+            margin: 10px;
+            border: 1px solid $white;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px 5px $yellow;
+        }
+    
+        &__title {
+            color: $pink;
+            text-align: center;
+            font-family: $title-font;
+            font-size: $section-title-size;
+            margin: 10px auto;
+        }
+    
+        &__top {
+            height: 100%;
+            padding: 20px;
+            transition: margin-top 1s ease;
+            box-sizing: border-box;
+            transition: display 1s ease;
+            min-height: 270px;
+        }
+    
+        &__bottom {
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: none;
+            transition: display 1s ease;
+            min-height: 270px;
+        
+        }
+    
+        &__article {
+            font-family: $text-font;
+            font-size: $text-size;
+            line-height: $text-line-height;
+        }
+    }
+}
+
+
+
+
+
 
 .contacts {
     background-color: #ffd700;
     padding: 10px;
     border-radius: 20px;
-    width: 400px;
+    width: 80%;
+    max-width: 400px;
     height: 50px;
     margin: 0 auto;
 
