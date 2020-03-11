@@ -1,0 +1,38 @@
+.footer {
+    background-color: $black;
+    padding: 40px;
+    text-align: center;
+    min-width: $min-width;
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: $logo-font, cursive;
+        text-align: center;
+        font-size: $logo-desktop-size;
+    }
+
+    &__link {
+        color: $yellow;
+    }
+
+    &__description {
+        margin-top: 20px;
+
+        @media (min-width: 768px) {
+            width: 40%;
+            margin-top: 0;
+        }
+    }
+
+    &__text {
+        font-family: $text-font, sans-serif;
+        color: $pink;
+        line-height: $text-line-height;
+        text-align: center;
+    }
+}

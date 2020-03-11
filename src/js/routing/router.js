@@ -8,11 +8,11 @@ export default class Router {
         window.addEventListener("hashchange", () => this.hasChanged(this));
         if (window.location.hash) {
             this.hasChanged(this);
+        } else {
+            routes
+                .filter(route => route.default)
+                .forEach(route => this.goToRoute(route.htmlName));
         }
-
-        routes
-            .filter(route => route.default)
-            .forEach(route => this.goToRoute(route.htmlName));
     }
 
     hasChanged(scope) {
