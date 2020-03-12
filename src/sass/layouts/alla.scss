@@ -11,6 +11,12 @@
     top: 300px;
     font-size: $scroll-block-text-size;
     display: none;
+    font-family: $title-font;
+    border-radius: 20px;
+
+    &:hover {
+        box-shadow: 0 0 5px 2px $pink;
+    }
 
     &:nth-child(1) {
         @extend .scrollArea;
@@ -212,7 +218,7 @@
     border-radius: 20px;
     width: 80%;
     max-width: 400px;
-    height: 50px;
+    padding: 10px;
     margin: 0 auto;
 
     &__list {
