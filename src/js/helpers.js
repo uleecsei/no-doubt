@@ -59,3 +59,14 @@ export const scrollBlocks = () => {
         }
     }
 }
+
+export const fixWindow = htmlName => {
+
+    window.location.hash = htmlName.split(".")[0];
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+}
