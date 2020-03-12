@@ -1,0 +1,122 @@
+.artist-page {
+    background-color: $whitesmoke;
+    margin-top: 162px;
+
+    &__container {
+        max-width: $max-width-container;
+        margin: 0 auto;
+        background-color: $black;
+        padding: 20px 56px;
+    }
+    &__title {
+        font-family: $title-font;
+        font-size: $section-title-size;
+        margin-top: 20px;
+        color: $yellow;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $yellow;
+    }
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 14px;
+    }
+    &__image-container {
+        width: 40%;
+    }
+    &__image {
+        display: inline-block;
+        width: 100%;
+    }
+    &__image--artist-adult {
+        margin-top: 65px;
+    }
+    &__information {
+        width: 40%;
+    }
+    &__information--lifecareer{
+        width: 100%;
+        margin: 40px 0;
+    }
+    &__information--personal{
+        margin-top: 65px;
+    }
+    &__image-title {
+        font-family: $text-font;
+        text-align: center;
+        color: $whitesmoke;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px 15px 0 15px;
+    }
+    &__image-container--artist-youth{
+        margin-right: 80px;
+    }
+}
+
+.references {
+    text-align: center;
+    width: 75px;
+    margin-top: 10px;
+
+    &__list {
+        font-size: 15px;
+        width: 75px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+        display: inline-block;
+        color: $whitesmoke;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        background: #272727;
+        border-radius: 50px;
+    }
+    &__link:hover {
+        box-shadow: 0px 0px 5px 2px $pink;
+    }
+}
+
+.biography {
+    border: 1px solid $yellow;
+    height: max-content;
+    padding: 30px;
+
+    &__header {
+        font-family: $title-font;
+        font-size: $card-title-size;
+        color: $pink;
+        margin-bottom: 10px;
+    }
+    &__text {
+        font-family: $text-font;
+        font-size: $text-size;
+        color: $whitesmoke;
+    }
+}
+
+.text {
+    line-height: 20px;
+    &__name {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 900px) {
+    .artist-page{
+        &__information{
+            width: 100%;
+        }
+        &__image-container{
+            width: 100%;
+            margin: 30px 0;
+        }
+        &__image-container--artist-youth{
+            margin-right: 0px;
+        }
+    }
+}

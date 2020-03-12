@@ -1,63 +1,137 @@
+// loading block
+// @import  url(https://fonts.googleapis.com/css?family=Montserrat);
+$width: 25px;
+$height: 25px;
+$bounce_height: 30px;
+
 .karaoke {
-  max-width: 1200px;
-  height: 300px;
+  &__loading {
+    height: 100px;
+  }
+
+  &__bounceball {
+    position: relative;
+    display: inline-block;
+    height: 57px;
+    width: $width;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      width: $width;
+      height: $height;
+      border-radius: 50%;
+      background-color: $pink;
+      transform-origin: 50%;
+      animation: bounce 500ms alternate infinite ease;
+    }
+  }
+
+}
+
+@keyframes bounce {
+  0% {
+    top: $bounce_height;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+  35% {
+    height: $height;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+// main styles
+
+
+.karaoke {
+  max-width: $max-width-container;
+  min-width: $min-width-container;
+  height: 410px;
   overflow: hidden;
-  margin: 50px auto 0;
+  margin: 0 auto;
+  padding-top: 50px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
+
+  &__title {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: $pink;
+    font-family: $title-font;
+    font-size: $section-title-size;
+    text-indent: 12%;
+    text-transform: uppercase;
+  }
+
+  &__songBlock {
+    align-self: flex-start;
+    padding-top: 50px;
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+  }
+
+  &__textBlock {
+    width: 85%;
+    font-size: $karaoke-text-size;
+    font-family: $text-font;
+    text-align: center;
+    margin-top: 100px;
+    padding: 0 5px;
+  }
+
+  &__textLine {
+    height: 100px;
+    line-height: normal;
+    width: 100%;
+    max-width: 100%;
+    color: $light-black;
+
+    &--current {
+      @extend .karaoke__textLine;
+      color: $pink;
+    }
+  }
+
+  &__button {
+    width: 80px;
+    max-width: 100%;
+    height: 80px;
+    border: none;
+    outline: none;
+
+    &--play {
+      @extend .karaoke__button;
+      background: url("/src/images/play.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--pause {
+      @extend .karaoke__button;
+      background: url("/src/images/pause.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 }
 
-.karaoke__songBlock {
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $white;
-}
 
-.karaoke__textBlock {
-  width: 90%;
-  font-size: $karaoke-text-size;
-  font-family: $text-font;
-  text-align: center;
-  margin-top: 100px;
-  padding: 0 5px;
-}
-
-.karaoke__textLine {
-  height: 100px;
-  line-height: normal;
-  width: 100%;
-  max-width: 100%;
-  color: $light-black;
-}
-
-.karaoke__textLine--current {
-  color: $pink;
-}
-
-button[class^="karaoke__button"]{
-  width: 100px;
-  max-width: 100%;
-  height: 100px;
-  border: none;
-  outline: none;
-}
-
-.karaoke__button--play {
-  background: url("/src/images/play.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.karaoke__button--pause{
-  background: url("/src/images/pause.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 
 @media (min-width: 1024px){
@@ -78,24 +152,28 @@ button[class^="karaoke__button"]{
 
 @media (max-width: 425px){
   .karaoke {
-    margin-top: 10px;
-    height: 370px;
+    padding-top: 0;
+    height: 430px;
     flex-wrap: wrap;
-  }
 
-  .karaoke__songBlock {
-    width: 100%;
-    z-index: 20;
-  }
+    &__title {
+      text-indent: 0;
+    }
 
+    &__songBlock {
+      width: 100%;
+      z-index: 20;
+      padding-top: 0;
+    }
 
-  .karaoke__textBlock {
-    width: 100%;
-    font-size: $karaoke-text-size-min;
-  }
+    &__textBlock {
+      width: 100%;
+      font-size: $karaoke-text-size-min;
+    }
 
-  button[class^="karaoke__button"]{
-    width: 70px;
-    height: 70px;
+    &__button {
+      width: 70px;
+      height: 70px;
+    }
   }
 }

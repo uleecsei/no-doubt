@@ -62,7 +62,7 @@
                         To celebrate the 25th Anniversary of our self-titled
                         debut album, we’re releasing it on vinyl for the first
                         time ever! 100 copies of the limited edition color vinyl
-                        have been personally signed by Gwen Stefani, Tony Kanal,
+                        have been personally signed by Gwen Stefani, Dashko Ivan,
                         Tom Dumont, Adrian Young and Eric Stefani.
                     </p>
                 </div>
@@ -71,7 +71,7 @@
                 <h3 class="card__title">Thank You No Doubters!</h3>
                 <div class="card__image-container">
                     <img
-                        src="./src/images/news/band_thankyou.jpg"
+                        src="./src/images/news/1.jpg"
                         alt="Global Citizen Earth Day"
                         class="card__image"
                     />
@@ -88,7 +88,7 @@
                 <h3 class="card__title">Riot Fest & Carnival</h3>
                 <div class="card__image-container">
                     <img
-                        src="./src/images/news/riot_fest.jpg"
+                        src="./src/images/news/2.jpg"
                         alt="Global Citizen Earth Day"
                         class="card__image"
                     />
@@ -110,7 +110,7 @@
                 </h3>
                 <div class="card__image-container">
                     <img
-                        src="./src/images/news/earth-day.jpg"
+                        src="./src/images/news/3.jpg"
                         alt="Global Citizen Earth Day"
                         class="card__image"
                     />
@@ -129,13 +129,18 @@
 </section>
 
 <div class="karaoke">
+    <div class="karaoke__title">Let's sing together</div>
     <div class="karaoke__songBlock">
         <audio
             id="audio"
             class="karaoke__audio"
             src="./src/No%20Doubt%20-%20Don't%20Speak.mp3"
         ></audio>
-        <button id="playerButton" class="karaoke__button--play"></button>
+        <button id="playerButton" class="karaoke__button karaoke__button--play"></button>
     </div>
-    <div class="karaoke__textBlock" id="divSong"></div>
+    <div class="karaoke__textBlock" id="divSong">
+            <div class="karaoke__loading">
+              <div class="karaoke__bounceball"></div>
+            </div>
+    </div>
 </div>

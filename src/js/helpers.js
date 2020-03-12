@@ -27,28 +27,48 @@ export const initKaraoke = song => {
 
 export const scrollBlocks = () => {
 
-    let block = document.querySelector(".artistBlock");
+    let blocks = document.querySelectorAll(".scrollArea");
+    
+    blocks.forEach(e=>{
+        e.addEventListener("wheel", onWheel);
+    })
 
-    block.addEventListener("wheel", onWheel)
+    function onWheel(e) {
+        e.preventDefault();
+        
+        if (window.innerWidth >= 1200) {
+            e = e || window.event;
+            var delta = e.deltaY || e.detail || e.wheelDelta;
+            var prevPosition = 0;
+            var duration = "";
+            if (prevPosition < delta) {
+                duration = "down";
+            } else {
+                duration = "up";
+            }
 
-        function onWheel (e) {
-        e = e || window.event;
-        var delta = e.deltaY || e.detail || e.wheelDelta;
-        var prevPosition = 0;
-        var duration = "";
-        if (prevPosition < delta) {
-            duration = "down";
-        } else {
-            duration = "up";
-        }
+            if (duration === "down") {
+                document.querySelector(".photo-block__immage").style.marginLeft = "-50%"
+                document.querySelectorAll(".description__top").forEach(e => { e.style.display = "none" })
+                document.querySelectorAll(".description__bottom").forEach(e => { e.style.display = "block" })
+            } else if (duration === "up") {
+                document.querySelector(".photo-block__immage").style.marginLeft = "0"
+                document.querySelectorAll(".description__top").forEach(e => { e.style.display = "block" })
+                document.querySelectorAll(".description__bottom").forEach(e => { e.style.display = "none" })
+            }
+        }else{
 
-        if (duration === "down") {
-            document.querySelector(".photo-block__immage").style.marginLeft = "-50%"
-            document.querySelectorAll(".description__top").forEach(e => { e.style.marginTop = "-50%" })
-        } else if (duration === "up") {
-            document.querySelector(".photo-block__immage").style.marginLeft = "0"
-            document.querySelectorAll(".description__top").forEach(e => { e.style.marginTop = "0" })
         }
     }
+}
 
+export const fixWindow = htmlName => {
+
+    window.location.hash = htmlName.split(".")[0];
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
 }

@@ -22,18 +22,27 @@ class Karaoke {
 
         this.audio.ontimeupdate = (e) => {
             this.song.forEach((element, index) => {
-                    if (e.target.currentTime >= element.start && e.target.currentTime <= element.end) {
-                            let margin = `${marginIndex * (index-1)}px`;
-                            this.divSong.style.marginTop = margin;
-                            if(index>0 && index !== currentIndex){
-                                this.divSong.children[index].classList.toggle("karaoke__textLine--current");
-                                this.divSong.children[index-1].classList.remove("karaoke__textLine--current")
-                                currentIndex = index;
-                            }
+                if (e.target.currentTime >= element.start && e.target.currentTime <= element.end) {
+                    let loading = document.querySelector(".karaoke__bounceball");
+                    let margin = `${marginIndex * index}px`;
+
+
+                    this.divSong.style.marginTop = margin;
+
+                    if (margin === "0px") {
+                        loading.style.display = "none";
+                    } else {
+                        loading.style.display = "inline-block";
                     }
 
-                })
+                    if (index !== currentIndex) {
+                        this.divSong.children[index+1].classList.toggle("karaoke__textLine--current");
+                        this.divSong.children[index].classList.remove("karaoke__textLine--current")
+                        currentIndex = index;
+                    }
+                }
 
+            })
         }
     }
 

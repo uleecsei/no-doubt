@@ -3,6 +3,7 @@
 
     &__container {
         max-width: $max-width-container;
+        min-width: $min-width;
         margin: 0 auto 0;
         padding: 10px;
     }
