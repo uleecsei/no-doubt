@@ -45,10 +45,11 @@
 
 .person {
     margin-top: 50px;
+    text-align: center;
 
     @media (min-width: 768px) {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -60,6 +61,8 @@
         border: 1px solid $black;
         border-radius: 10px;
         overflow: hidden;
+        width: 90%;
+        margin: 0 auto;
 
         &:hover {
             box-shadow: 0 0 10px 2px $black;
@@ -76,6 +79,7 @@
 
     &__introduction {
         margin-top: 20px;
+       
         @media (min-width: 768px) {
             width: 50%;
             margin-top: 0;

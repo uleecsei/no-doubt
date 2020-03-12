@@ -1,7 +1,8 @@
 .slider{
   max-width: 100%;
+  min-width: $min-width;
   position: relative;
-  margin-top: 162px;
+  margin-top: $margin-top;
   height: min-content;
 }
 
