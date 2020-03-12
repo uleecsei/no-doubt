@@ -1,5 +1,11 @@
-import { initSlider, initKaraoke, scrollBlocks } from "../helpers.js";
+import {
+    initSlider,
+    initKaraoke,
+    scrollBlocks,
+    fixWindow,
+} from "../helpers.js";
 import { doNotSpeak } from "../songs";
+import PAGES from './pages';
 
 export default class Router {
     constructor(routes) {
@@ -30,16 +36,16 @@ export default class Router {
             .then(response => response.text())
             .then(text => (this.rootElem.innerHTML = text));
 
-        window.location.hash = htmlName.split(".")[0];
+        fixWindow(htmlName);
 
-        if (htmlName === "main.html") {
+        if (htmlName === PAGES.MAIN) {
             let slider = initSlider(document.querySelector(".slider"));
 
             initKaraoke(doNotSpeak);
         }
 
-        if (htmlName === "allapage.html") {
-            scrollBlocks(); 
+        if (htmlName === PAGES.ALLA_PAGE) {
+            scrollBlocks();
         }
     }
 }
