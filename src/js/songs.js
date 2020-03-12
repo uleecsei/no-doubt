@@ -1,5 +1,4 @@
 export const doNotSpeak = [
-    {start:"0", end: "6.99", text: ""},
     {start:"7.00", end: "9.99", text: "You and me"},
     {start:"10.00", end: "13.0", text: "we used to be together"},
     {start:"13.01", end: "15.89", text: "every day together,"},

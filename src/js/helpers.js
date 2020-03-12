@@ -27,9 +27,11 @@ export const initKaraoke = song => {
 
 export const scrollBlocks = () => {
 
-    let block = document.querySelector(".scrollArea");
+    let blocks = document.querySelectorAll(".scrollArea");
     
-    block.addEventListener("wheel", onWheel)
+    blocks.forEach(e=>{
+        e.addEventListener("wheel", onWheel);
+    })
 
     function onWheel(e) {
         e.preventDefault();
